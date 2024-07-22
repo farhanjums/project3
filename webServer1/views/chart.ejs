@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Chart</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="Feedback.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 6.12.10, nicepage.com">
+    <meta name="referrer" content="origin">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
+    <script src= "https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+
+<style>
+    .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+</style>
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Feedback">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-0656"><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="/api/home" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="/api/Log-In" style="padding: 10px 20px;">Log In</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/api/home">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/api/Log-In">Log In</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <div style="background-color: #292D33;"><h1 style="color: aliceblue; text-align: center; padding-bottom: 0px;">Question 1 </h1>
+    <div class="u-clearfix u-custom-color-1 u-section-1" style="background-color: #292D33; height: 748px; padding-top: 0px;" id="sec-6b76">
+        <canvas id="test1"></canvas>
+    </div>
+    <div class="center" style="align-content: center;">
+        <button onclick="location.href='/api/chart3'" style="align-self: center;">PREV</button>
+        <button onclick="call_api_end_point()">REFRESH</button>
+        <button onclick="location.href='/api/chart2'">NEXT</button>
+    </div>
+    </div>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-94e2"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">ICT2509C Project By Farhan 2024.</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <p class="u-text">
+        <span>This site was created with the </span>
+        <a class="u-link" href="https://nicepage.com/" target="_blank" rel="nofollow">
+          <span>Nicepage</span>
+        </a>
+      </p>
+    </section>
+
+    <script >
+        
+        
+        fetch('https://farhan-testing.s3.amazonaws.com/output/q1Data.json',{mode: 'cors',headers: { 'Access-Control-Allow-Origin':'*'}})
+            .then(function(response) {
+                console.log(response);
+                return (response).json();
+            })
+            .then(function(ids) {
+                chart = new Chart(document.getElementById("test1"),ids);
+
+        });
+        
+     
+       
+    
+
+      // defining a function
+      function openUrl()
+      {
+          // assigning a new URL to window.location.href
+          //window.location.href = "/api/home";
+          event.preventDefault();
+      }
+
+      function submission()
+      {
+          // assigning a new URL to window.location.href
+          //window.location.href = "/api/home";
+          document.getElementById("myForm").submit();
+      }
+
+
+Chart.register({
+            id: 'textInside',
+            afterDatasetsDraw: function (chart, _) {
+                const ctx = chart.ctx;
+                const width = chart.width;
+                const height = chart.height;
+                const fontSize = chart.options.plugins.textInside.fontSize;
+                ctx.font = fontSize + 'px Arial';
+                ctx.fillStyle = chart.options.plugins.textInside.color;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                const text = chart.options.plugins.textInside.text;
+                const textX = Math.round(width / 2);
+                const textY = Math.round(height / 2);
+                ctx.fillText(text, textX, textY);
+            }
+        });
+        const api_url = 'https://l49327mczj.execute-api.us-east-1.amazonaws.com/alpha/execution';
+        function call_api_end_point(){
+          fetch(api_url,{method:'POST',
+                          mode: 'cors',
+                          headers: { 'Access-Control-Allow-Origin':'*'},
+                          body: JSON.stringify({ 
+                                      "input": "{}", 
+                                      "stateMachineArn": "arn:aws:states:us-east-1:839139777690:stateMachine:MyStateMachine-qbee97rma" 
+                                      }) 
+                        })
+
+          .then((resp) => resp.json())
+          .then(function(data) {
+            if(data){
+            location.href="/api/holdOn";
+            }
+      })
+   }
+
+
+</script>
+
+</body>
+
+</html>
