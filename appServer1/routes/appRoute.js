@@ -19,7 +19,7 @@ secret("farhan-Secret-DB").then(
     password: dbValues.password,
     database: 'project3',
     ssl: {
-      ca: fs.readFileSync('../../global-bundle.pem')
+      ca: fs.readFileSync(__dirname +'/../../global-bundle.pem')
   }
   })
 
