@@ -10,7 +10,7 @@ const secret = require('../views/secret.js');
 
 router.use(express.static("views"));
 
-secret("farhan-Secret-DB").then(
+secret("farhan-Secret-DB-2").then(
   values => values).then((dbValues) =>
 
     con = mysql.createConnection({
