@@ -7,9 +7,10 @@ const bodyParser = require("body-parser");
 let fetch = require('node-fetch');
 let bcrypt = require('bcrypt');
 const passport = require('passport');
-const flash = require('express-flash');
 const session = require('express-session');
 const LocalStategy = require('passport-local').Strategy;
+const https = require('https');
+const secret = require('./secret1.js');
 
 app.use(express.json());
 
@@ -144,8 +145,34 @@ passport.use('local',new LocalStategy({passReqToCallback:true },
 app.use("/api", require("./routes/routes"));
 
 
-app.listen(port,()=>{
-    console.log(`Server running on port ${port}`);
-});
+//app.listen(port,()=>{
+    //console.log(`Server running on port ${port}`);
+//});
+
+
+async function s1() {
+    return secret('farhan-key');
+  }
+  async function s2() {
+    return secret('farhan-cert');
+  }
+  
+  async function asyncCaller(app) {
+    const result = await s1();
+    const result2 = await s2();
+    console.log(result);
+    console.log(result2);
+
+
+    const sslServer = https.createServer({
+        key:  result,
+        cert:  result2
+    },app)
+    sslServer.listen(3443,()=>console.log('Running on Port 3443'));
+
+  }
+  
+  asyncCaller(app);
+  
 
 app.use(bodyParser.urlencoded({extended:true}));
